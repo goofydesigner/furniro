@@ -2,6 +2,8 @@
 
 Furniro is an e-commerce website designed to sell furniture across various categories such as dining, living, and bedroom. The website also features informative blogs about furniture. Each furniture item has a dedicated product page, providing detailed information to customers.
 
+Figma Link: https://www.figma.com/design/IQyL5CfOCvWD0W0mGmtRa3/E---Commerce?node-id=1-22150&t=AhAcqJgoMcHdxtA6-0
+
 ## Table of Contents
 
 - [Features](#features)
