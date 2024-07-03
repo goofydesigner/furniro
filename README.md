@@ -55,14 +55,14 @@ Make sure you have the following installed:
 2. Install NPM packages for the frontend:
 
     ```sh
-        cd client
-        npm install
+     cd client
+     npm install
     ```
 3. Install NPM packages for the backend:
 
     ```sh
-        cd ../server
-        npm install
+     cd ../server
+     npm install
     ```
 4. Start MongoDB:
     
