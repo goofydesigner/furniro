@@ -1,20 +1,41 @@
 import './App.css';
 
+
 // react router dom imports
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // pages imports
 import Navbar from "./components/navbar/navbar";
-
+import Footer from './components/footer/Footer';
+import ProductCard from './components/Product_card/ProductCard';
+import BlogPost from './components/blog_post/BlogPost';
+import Shop from './pages/shop/Shop';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Navbar />,
   },
   {
+    path: "/footer",
+    element: <Footer />,
+  },
+  {
     path: "/test",
     element: <div>Test</div>,
-  }
+  }, 
+  {
+    path: "/card",
+    element: <ProductCard />,
+  },
+  {
+    path: "/blogpost",
+    element: <BlogPost/>,
+  },
+
+  {
+    path: "/shop",
+    element: <Shop/>,
+  },
 ]);
 
 function App() {
