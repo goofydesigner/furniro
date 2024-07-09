@@ -7,7 +7,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
 import Signin from './pages/signin/signin';
 import Signup from './pages/signup/signup';
-
+import Footer from './components/footer/Footer';
+import ProductCard from './components/Product_card/ProductCard';
+import BlogPost from './components/blog_post/BlogPost';
+import Shop from './pages/shop/Shop';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,6 +27,23 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />,
+  },
+  {
+    path: '/footer',
+    element: <Footer />,
+  },
+  {
+    path: '/card',
+    element: <ProductCard />,
+  },
+  {
+    path: '/blogpost',
+    element: <BlogPost />,
+  },
+
+  {
+    path: '/shop',
+    element: <Shop />,
   },
 ]);
 
