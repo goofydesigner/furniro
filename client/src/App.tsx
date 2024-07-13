@@ -9,16 +9,17 @@ import { AuthProvider } from './utils/AuthContext';
 // pages imports
 // import Navbar from './components/navbar/navbar';
 import Signin from './pages/signin/Signin';
-import Signup from './pages/signup/signup';
+import Signup from './pages/signup/Signup';
 import Footer from './components/footer/Footer';
 import ProductCard from './components/Product_card/ProductCard';
 import BlogPost from './components/blog_post/BlogPost';
 import Shop from './pages/shop/Shop';
+import Home from './pages/signin/Home';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Signin />,
+    element: <Home />,
   },
   {
     path: '/test',
@@ -48,12 +49,16 @@ const router = createBrowserRouter([
     path: '/shop',
     element: <Shop />,
   },
+  {
+    path: '*',
+    element: <div>Page not found</div>,
+  },
 ]);
 
 function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </AuthProvider>
   );
 }
