@@ -3,18 +3,22 @@ import './App.css';
 // react router dom imports
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+// auth provider import
+import { AuthProvider } from './utils/AuthContext';
+
 // pages imports
-import Navbar from './components/navbar/navbar';
-import Signin from './pages/signin/signin';
+// import Navbar from './components/navbar/navbar';
+import Signin from './pages/signin/Signin';
 import Signup from './pages/signup/signup';
 import Footer from './components/footer/Footer';
 import ProductCard from './components/Product_card/ProductCard';
 import BlogPost from './components/blog_post/BlogPost';
 import Shop from './pages/shop/Shop';
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navbar />,
+    element: <Signin />,
   },
   {
     path: '/test',
@@ -47,7 +51,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />;
+    </AuthProvider>
+  );
 }
 
 export default App;
