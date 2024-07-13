@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // auth provider import
 import { AuthProvider } from './utils/AuthContext';
+import PrivateRoutes from './utils/PrivateRoutes';
 
 // pages imports
 // import Navbar from './components/navbar/navbar';
@@ -19,11 +20,33 @@ import Home from './pages/signin/Home';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/test',
-    element: <div>Test</div>,
+    element: <PrivateRoutes />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/test',
+        element: <div>Test</div>,
+      },
+      {
+        path: '/footer',
+        element: <Footer />,
+      },
+      {
+        path: '/card',
+        element: <ProductCard />,
+      },
+      {
+        path: '/blogpost',
+        element: <BlogPost />,
+      },
+      {
+        path: '/shop',
+        element: <Shop />,
+      },
+    ],
   },
   {
     path: '/signin',
@@ -32,22 +55,6 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />,
-  },
-  {
-    path: '/footer',
-    element: <Footer />,
-  },
-  {
-    path: '/card',
-    element: <ProductCard />,
-  },
-  {
-    path: '/blogpost',
-    element: <BlogPost />,
-  },
-  {
-    path: '/shop',
-    element: <Shop />,
   },
   {
     path: '*',
