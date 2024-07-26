@@ -15,7 +15,8 @@ import Footer from './components/footer/Footer';
 import ProductCard from './components/Product_card/ProductCard';
 import BlogPost from './components/blog_post/BlogPost';
 import Shop from './pages/shop/Shop';
-import Home from './pages/signin/Home';
+import Home from './pages/home/Home';
+
 
 const router = createBrowserRouter([
   {
