@@ -6,7 +6,7 @@ import { faSearch, faShoppingCart, faHeart, faUser } from '@fortawesome/free-sol
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div className="container">
           <a className="navbar-brand" href="#">
             <img src={logo} width="50" height="32" alt="Logo" /> Furniro
