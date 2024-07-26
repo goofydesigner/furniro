@@ -8,7 +8,6 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prepare": "husky install",
     "prettier": "prettier --check '**/**/*.{js,jsx,ts,tsx,css}'",
     "prettier:fix": "prettier --write '**/**/*.{js,jsx,ts,tsx,css}'"
   },
@@ -42,7 +41,6 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "globals": "^15.8.0",
-    "husky": "^8.0.3",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "typescript": "^5.2.2",
@@ -54,10 +52,5 @@
       "eslint --fix",
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "eslint --fix"
-    }
   }
 }
