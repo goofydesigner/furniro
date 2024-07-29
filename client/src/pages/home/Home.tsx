@@ -17,6 +17,8 @@ import product3 from '../../assets/Products_images/Respira.png'
 import product4 from '../../assets/Products_images/Potty.png'
 import product5 from '../../assets/Products_images/Pingky.png'
 import product6 from '../../assets/Products_images/Muggo.png'
+import Footer from '../../components/footer/Footer';
+
 
 function Home() {
   const { user, signOutUser } = useAuth();
@@ -38,8 +40,11 @@ function Home() {
       console.error(result.err);
     }
   };
+
+
   return (
     <>
+
       <div className='img-navbar overflow-hidden'>
         <Navbar />
 
@@ -50,13 +55,13 @@ function Home() {
             <Col md={6}>
               <div className="Discover">
 
-                  <div className='new-arrival'>New Arrival</div>
-                  <h1>Discover Our</h1>
-                  <h1> New Collection</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis. </p>
+                <div className='new-arrival'>New Arrival</div>
+                <h1>Discover Our</h1>
+                <h1> New Collection</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis. </p>
 
-                  <button className="buy-now-btn">Buy Now</button>
-              
+                <button className="buy-now-btn">Buy Now</button>
+
               </div>
             </Col>
           </Row>
@@ -203,14 +208,13 @@ function Home() {
         </div>
       </div>
 
-
       <div className='carousal-container'>
         <Row>
 
           <Col md={5} className="my-3 d-flex justify-content-center">
             <div className='left-text'>
-              <span>50+ Beautiful rooms inspiration</span>
-              <h1>Our designer already made a lot of beautiful prototipe of rooms that inspire you</h1>
+              <span style={{ marginRight: 10 }}>50+ Beautiful rooms inspiration</span>
+              <h1 style={{ marginRight: 10 }}>Our designer already made a lot of beautiful prototipe of rooms that inspire you</h1>
 
               <button className="btnfilled">Explore More</button>
 
@@ -218,22 +222,34 @@ function Home() {
           </Col>
 
           <Col md={7} className="my-3 d-flex justify-content-center">
-
+            <div className="slider-wrapper left">
+              <div className="item item1"></div>
+              <div className="item item2"></div>
+              <div className="item item3"></div>
+              <div className="item item4"></div>
+              <div className="item item5"></div>
+              <div className="item item6"></div>
+              <div className="item item7"></div>
+              <div className="item item8"></div>
+            </div>
           </Col>
 
         </Row>
       </div>
 
+      <div className="tag">
+        <h3>Share your setup with</h3>
+        <h1>#FuniroFurniture</h1>
+      </div>
 
-
-
+      <div className='imageGallery'></div>
 
 
       <div className=" my-5 button-container">
         <button onClick={onClickSignOut} className="showmorebtn">SIGN OUT!</button>
       </div>
 
-
+      <Footer />
 
     </>
   );

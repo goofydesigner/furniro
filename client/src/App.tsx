@@ -19,6 +19,7 @@ import Home from './pages/home/Home';
 
 
 const router = createBrowserRouter([
+
   {
     path: '/',
     element: <PrivateRoutes />,
@@ -49,14 +50,17 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: '/signin',
     element: <Signin />,
   },
+
   {
     path: '/signup',
     element: <Signup />,
   },
+  
   {
     path: '*',
     element: <div>Page not found</div>,
