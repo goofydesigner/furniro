@@ -1,60 +1,103 @@
-
 .shop-container {
   text-align: center;
-  .shop-banner {
-      background-image: url('../../assets/shop.jpeg'); 
-      background-size: cover;
-      background-position: center;
-      padding: 2rem 1rem;
-      position: relative;
-      height: 316px;
 
-      h1 {
-          margin: 0;
-          font-size: 2.5rem;
-          color: black;
-          margin-top: 5.5rem;
-      }
-      h2{
-        margin: 0;
-          font-size: 1.5rem;
-          color: black;
-          margin-top: 1rem;
-      }
+  .shop-banner {
+    background-image: url('../../assets/shop.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1rem;
+    position: relative;
+    height: 316px;
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: black;
+      margin-top: 5.5rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: black;
+      margin-top: 1rem;
+    }
   }
 }
 
-.filter-and-pagination {
+
+.filters {
   display: flex;
-  justify-content:center;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
-  background-color: #f5f5f5; // Adjust background color as needed
+  background-color: #F9F1E7;
 
-  .filter-section {
-    display: flex;
-    align-items: center;
-    // Add styles for filter icons or text
-  }
-
+  .filter-section,
+  .results-section,
+  .show-items,
   .pagination-section {
     display: flex;
     align-items: center;
-    gap: 1rem;
-
-    button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      // Add hover and active states
-    }
   }
 
-  .sorting-section {
+  .filter-button,
+  .filter-options-button,
+  .sort-by-button,
+  .default-button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+
+  .vertical-line {
+    border-left: 2px solid black;
+    /* Adjust color and width as needed */
+    width: 20px;
+    height: 100%;
+    /* Ensure the line matches the container's height */
+    margin: 0 1rem;
+    /* Add margin for spacing */
+  }
+
+  .item-count {
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+  }
+
+
+}
+
+
+
+.promise {
+  height: auto; 
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-evenly; 
+  align-items: center;
+  padding: 1rem;
+  background-color: #F9F1E7;
+
+  .quality {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    // Add styles for sorting options
+    text-align: center;
+    margin: 1rem; 
+
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promise {
+    padding: 0.5rem;
   }
 }
 
@@ -67,31 +110,37 @@
   height: auto;
 
   .card {
-      width: 28rem;
-      background-color: #F4F5F7;
+    width: 28rem;
+    background-color: #F4F5F7;
   }
 
   .showmorebtn {
-      margin-top: 2rem;
-      height: 4rem;
-      width: 15rem;
-      background: none;
-      border-color: #B88E2F;
-      color: #B88E2F;
-      font-weight: 500;
+    margin-top: 2rem;
+    height: 4rem;
+    width: 15rem;
+    background: none;
+    border-color: #B88E2F;
+    color: #B88E2F;
+    font-weight: 500;
   }
 }
 
 @media (max-width: 768px) {
   .shop-container {
-      .shop-controls {
-          flex-direction: column;
+    .shop-controls {
+      flex-direction: column;
 
-          .fliters,
-          .results-info,
-          .controls {
-              margin-bottom: 1rem;
-          }
+      .fliters,
+      .results-info,
+      .controls {
+        margin-bottom: 1rem;
       }
+    }
   }
+
+  .promise{
+    
+  }
+
+
 }

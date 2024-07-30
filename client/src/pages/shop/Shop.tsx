@@ -1,9 +1,8 @@
 import './shop.scss';
 import Navbar from '../../components/navbar/navbar';
 import Pagination from 'react-bootstrap/Pagination';
-import Dropdown from 'react-bootstrap/Dropdown';
 import { Card, Row, Col, } from 'react-bootstrap';
-
+import Dropdown from 'react-bootstrap/Dropdown';
 
 import product1 from '../../assets/Products_images/Syltherine.png'
 import product2 from '../../assets/Products_images/Lolito.png'
@@ -12,6 +11,16 @@ import product4 from '../../assets/Products_images/Potty.png'
 import product5 from '../../assets/Products_images/Pingky.png'
 import product6 from '../../assets/Products_images/Muggo.png'
 import Footer from '../../components/footer/Footer';
+
+import filtering from '../../assets/Icons/Filtering.png'
+import gridRound from '../../assets/Icons/Grid-round.png'
+import viewList from '../../assets/Icons/View-list.png'
+
+import trophy from '../../assets/Icons/Trophy.png'
+import tick from '../../assets/Icons/Tick.png'
+import support from '../../assets/Icons/Support.png'
+import call from '../../assets/Icons/Call.png'
+
 
 
 
@@ -37,30 +46,60 @@ const Shop = () => {
                 </div>
             </div>
 
-            <div className="filter-and-pagination">
-                <div className="filter-section">
-                    {/* Filter icons or text */}
+
+            <div className="filters">
+                <div className="filter-section" style={{ marginLeft: '10rem' }}>
+                    <button className="filter-options-button">
+                        <img src={filtering} alt="" />
+                    </button>
+
+                    <span className="text" style={{ margin: '0 0.5rem', fontSize: '1.2rem', fontWeight: 500 }}>Filter</span>
+
+                    <button className="filter-options-button">
+                        <img src={gridRound} alt="" />
+                    </button>
+
+                    <button className="filter-options-button">
+                        <img src={viewList} alt="" />
+                    </button>
+
+                    <div className="vertical-line" style={{ marginLeft: '1rem' }}>
+                        <img src="" alt="" />
+                    </div>
+
+                    <div className="results-section" style={{ marginLeft: '1rem', fontSize: '1.2rem', fontStyle: 'italic' }}>
+                        <span>Showing 1-16 of 32 results</span>
+                    </div>
                 </div>
-                <div className="pagination-section">
-                    <span>Showing 1-16 of 32 results</span>
-                    <button>Show: 16</button>
-                    <button>Short by:</button>
-                    <Dropdown>
-                        <Dropdown.Toggle variant="none" style={{ color: 'black' }}>
-                            Default
+
+
+                <div className="pagination-section" style={{ marginRight: '10rem' }}>
+                    <div className="show-items" style={{ gap: '0.8rem', marginRight: '2rem' }}>
+                        <span style={{ fontSize: '1.2rem', fontWeight: 500 }}>Show</span>
+                        <div className='item-count'>
+                            <span style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
+                                {1}
+                            </span>
+                        </div>
+                    </div>
+                    <span className="sort-by-button" style={{ fontSize: '1.2rem', fontWeight: 500 }}>Sort by</span>
+
+                    <Dropdown style={{ gap: '0.8rem', marginRight: '2rem', }}>
+                        <Dropdown.Toggle id="dropdown-basic" style={{ backgroundColor: '#fff', border: 'none', color: 'black' }}>
+                            Default Option
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Option 1</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another Option</Dropdown.Item>
                             <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
-                </div>
-                <div className="sorting-section">
-                    {/* Sorting options */}
+
+
                 </div>
             </div>
+
 
             <div className='Products'>
 
@@ -248,10 +287,79 @@ const Shop = () => {
                     </Col>
                 </Row>
 
-            
+
             </div>
 
-            <Footer/>
+            <div className="pagination" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginTop: '2rem', marginBottom: '4rem' }}>
+
+                <button className="page-1" style={{ backgroundColor: '#F9F1E7', height: '3rem', width: '3rem', border: 'none', borderRadius: '25%' }}>
+                    <span style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
+                        {1}
+                    </span>
+                </button>
+
+                <button className="page-2" style={{ backgroundColor: '#F9F1E7', height: '3rem', width: '3rem', border: 'none', borderRadius: '25%' }}>
+                    <span style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
+                        {2}
+                    </span>
+                </button>
+
+                <button className="page-3" style={{ backgroundColor: '#F9F1E7', height: '3rem', width: '3rem', border: 'none', borderRadius: '25%' }}>
+                    <span style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
+                        {3}
+                    </span>
+                </button>
+
+                <button className="More" style={{ backgroundColor: '#F9F1E7', height: '3rem', width: '3.5rem', border: 'none', borderRadius: '25%' }}>
+                    <span style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
+                        {"More"}
+                    </span>
+                </button>
+
+            </div>
+
+
+            <div className="promise">
+                <div className="quality">
+                    <img src={trophy} alt="" style={{width:'3rem', height:'3rem'}} />
+
+                    <div>
+                        <h3>High Quality</h3>
+                        <span>Crafted from top materials</span>
+                    </div>
+                </div>
+
+                <div className="quality">
+                    <img src={tick} alt="" style={{width:'3rem', height:'3rem'}} />
+
+                    <div>
+                        <h3>Warranty Protection</h3>
+                        <span>Over 2 years</span>
+                    </div>
+                </div>
+
+                <div className="quality">
+                    <img src={support} alt="" style={{width:'3rem', height:'3rem'}} />
+                    <div>
+
+                        <h3>Free Shipping</h3>
+                        <span>Order over 150 $</span>
+                    </div>
+                </div>
+
+                <div className="quality">
+                    <img src={call} alt="" style={{width:'3rem', height:'3rem'}} />
+                    <div>
+
+                        <h3>24 / 7 Support</h3>
+                        <span>Dedicated support</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <Footer />
 
 
 
