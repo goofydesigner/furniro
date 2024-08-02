@@ -16,6 +16,9 @@ import ProductCard from './components/Product_card/ProductCard';
 import BlogPost from './components/blog_post/BlogPost';
 import Shop from './pages/shop/Shop';
 import Home from './pages/home/Home';
+import SingleItem from './pages/singleItem/SingleItem';
+import ShoppingCart from './components/shoppingCart/ShoppingCart';
+import Cart from './pages/cart/Cart';
 
 
 const router = createBrowserRouter([
@@ -26,8 +29,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />,
-        // element: <Shop />,
+        // element: <Home />,
+        element: <SingleItem />,
+        // element: <ShoppingCart/>,
+        // element: <Cart/> ,
       },
       {
         path: '/test',
