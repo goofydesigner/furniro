@@ -19,6 +19,7 @@ import Home from './pages/home/Home';
 import SingleItem from './pages/singleItem/SingleItem';
 import ShoppingCart from './components/shoppingCart/ShoppingCart';
 import Cart from './pages/cart/Cart';
+import Comparison from './pages/comparison/Comparison';
 
 
 const router = createBrowserRouter([
@@ -30,26 +31,32 @@ const router = createBrowserRouter([
       {
         path: '/',
         // element: <Home />,
-        element: <SingleItem />,
+        // element: <SingleItem />,
         // element: <ShoppingCart/>,
-        // element: <Cart/> ,
+        element: <Cart/>,
+        // element: <Comparison/> ,
       },
+
       {
         path: '/test',
         element: <div>Test</div>,
       },
+
       {
         path: '/footer',
         element: <Footer />,
       },
+
       {
         path: '/card',
         element: <ProductCard />,
       },
+
       {
         path: '/blogpost',
         element: <BlogPost />,
       },
+
       {
         path: '/shop',
         element: <Shop />,
