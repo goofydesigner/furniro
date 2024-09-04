@@ -20,6 +20,8 @@ import SingleItem from './pages/singleItem/SingleItem';
 import ShoppingCart from './components/shoppingCart/ShoppingCart';
 import Cart from './pages/cart/Cart';
 import Comparison from './pages/comparison/Comparison';
+import Checkout from './pages/checkout/Checkout';
+import Contact from './pages/contact/Contact';
 
 
 const router = createBrowserRouter([
@@ -33,8 +35,11 @@ const router = createBrowserRouter([
         // element: <Home />,
         // element: <SingleItem />,
         // element: <ShoppingCart/>,
-        element: <Cart/>,
+        // element: <Cart/>,
+        // element: <Checkout/>,
         // element: <Comparison/> ,
+        element: <Contact/>,
+
       },
 
       {
