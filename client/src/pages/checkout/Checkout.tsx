@@ -39,12 +39,12 @@ const Checkout = () => {
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridFirstName">
                                     <Form.Label>First Name</Form.Label>
-                                    <Form.Control type="text" placeholder="" style={{ height: '50px', width: '300px' }} />
+                                    <Form.Control type="text" placeholder="" style={{ height: '50px', width: 'full' }} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridLastName">
                                     <Form.Label>Last Name</Form.Label>
-                                    <Form.Control type="text" placeholder="" style={{ height: '50px', width: '300px' }} />
+                                    <Form.Control type="text" placeholder="" style={{ height: '50px', width: 'full' }} />
                                 </Form.Group>
                             </Row>
 
