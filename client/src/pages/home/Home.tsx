@@ -101,7 +101,7 @@ function Home() {
       </div>
 
       <div className='Products'>
-        <Row className="mx-3 justify-content-center align-items-center">
+        <Row className=" mx-3 justify-content-center align-items-center">
           <Col md={3} className="my-3 d-flex justify-content-center">
             <Card className='border-0'>
               <Card.Img className='card-img' src={product1} />

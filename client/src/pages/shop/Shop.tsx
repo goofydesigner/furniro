@@ -43,13 +43,9 @@ const Shop = () => {
             </div>
 
 
-            <div className="filters">
+            {/* <div className="filters">
                 <div className="filter-section" style={{ marginLeft: '10rem' }}>
-                    <button className="filter-options-button">
-                        <img src={filtering} alt="" />
-                    </button>
-
-                    <span className="text" style={{ margin: '0 0.5rem', fontSize: '1.2rem', fontWeight: 500 }}>Filter</span>
+                    
 
                     <button className="filter-options-button">
                         <img src={gridRound} alt="" />
@@ -74,7 +70,7 @@ const Shop = () => {
                         <span style={{ fontSize: '1.2rem', fontWeight: 500 }}>Show</span>
                         <div className='item-count'>
                             <span style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
-                                {1}
+                                {9}
                             </span>
                         </div>
                     </div>
@@ -94,7 +90,81 @@ const Shop = () => {
 
 
                 </div>
+            </div> */}
+
+            <div className="filters">
+                <div className="leftDetails">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src={filtering} alt="" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <span>Filter</span>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <img src={gridRound} alt="" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <img src={viewList} alt="" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <div className='vrtcLine'>
+                                <img src="" alt="" />
+                            </div>
+                        </li>
+
+                        <li>
+                            <span>Showing 1–16 of 32 results</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="rightDetails">
+                    <ul>
+                        <li>
+                            <span>Show</span>
+                        </li>
+
+                        <li>
+                            <div className='showResult'>
+                                16
+                            </div>
+                        </li>
+
+                        <li>
+                            <span>Short by</span>
+                        </li>
+
+                        <li>
+                            <div className='shortDropdwn'>
+                                <Dropdown style={{ gap: '0.8rem', marginRight: '2rem'}}>
+                                <Dropdown.Toggle id="dropdown-basic">
+                                        Default Option
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Option 1</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another Option</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+
 
 
             <div className='Products'>
@@ -315,7 +385,7 @@ const Shop = () => {
             </div>
 
             <Promise />
-            
+
             <Footer />
 
 
