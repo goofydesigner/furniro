@@ -49,23 +49,13 @@ function Home() {
         <Navbar />
 
         <div className="home-main">
-          <Row>
-            <Col md={6}></Col>
 
-            <Col md={6}>
-              <div className="Discover">
-
-                <div className='new-arrival'>New Arrival</div>
-                <h1>Discover Our</h1>
-                <h1> New Collection</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis. </p>
-
-                <button className="buy-now-btn">Buy Now</button>
-
-              </div>
-            </Col>
-          </Row>
-
+          <div className='new-arrival'>
+              <span>New Arrival</span>
+              <h1>Discover Our New Collection</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+              <button className='btn'>BUY NOW</button>
+          </div>      
         </div>
 
       </div>
@@ -213,8 +203,8 @@ function Home() {
 
           <Col md={5} className="my-3 d-flex justify-content-center">
             <div className='left-text'>
-              <span style={{ marginRight: 10 }}>50+ Beautiful rooms inspiration</span>
-              <h1 style={{ marginRight: 10 }}>Our designer already made a lot of beautiful prototipe of rooms that inspire you</h1>
+              <h2 style={{ marginRight: 10 }}>50+ Beautiful rooms inspiration</h2>
+              <span style={{ marginRight: 10 }}>Our designer already made a lot of beautiful prototipe of rooms that inspire you</span>
 
               <button className="btnfilled">Explore More</button>
 

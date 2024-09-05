@@ -1,110 +1,107 @@
 .home-main {
-    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    background-image: url('../../assets/home-landing.png');
 
     width: 100vw;
     height: 100vh;
-    background-image: url('../../assets/home-landing.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    .Discover {
-        padding: 4rem;
-        height: 60vh;
-        width: 45vw;
-        // width: 90%;
-        max-width: 1200px;
+    // START OF NEW ARRIVAL BOX AND BG
+
+    .new-arrival {
+        margin-right: 10%;
+        padding: 50px;
         background-color: #FFF3E3;
-        margin: 0 auto;
+        width: 50%;
+        height: 60%;
+
         display: flex;
+        align-items: flex-start;
+        justify-content: center;
         flex-direction: column;
-    
-        .new-arrival {
-            font-size: 1.5rem;
+
+        span {
+            font-size: 22px;
             font-weight: 600;
         }
-    
+
         h1 {
-            font-size: 4.5rem;
-            font-weight: 700;
+            font-size: 5em;
+            font-weight: bold;
             color: #B88E2F;
+
         }
-    
+
         p {
-            font-size: 1.5rem;
-            line-height: 1.5;
-            margin: 1.5rem 0;
-            color: #333;
+            font-size: 22px;
+            font-weight: 500;
         }
-    
-        .buy-now-btn {
-            height: 4rem;
-            width: 15rem;
-            background-color: #B88E2F;
-            color: white;
+
+        .btn {
+            margin-top: 15px;
+            height:60px;
+            width: 200px;
+            background: #B88E2F;
             border: 2px solid #B88E2F;
-            font-weight: 600;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
             cursor: pointer;
-            transition: background 0.3s;
-    
+
             &:hover {
-                background-color: #FFF3E3;
+                background: #FFF3E3;
                 color: #B88E2F;
             }
         }
     }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        .Discover {
-            padding: 2rem;
-        }
-    
-        .new-arrival {
-            font-size: 1.25rem;
-        }
-    
-        h1 {
-            font-size: 3rem;
-        }
-    
-        p {
-            font-size: 1.2rem;
-        }
-    
-        .buy-now-btn {
-            width: 12rem;
-            height: 3.5rem;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .Discover {
-            padding: 1rem;
-        }
-    
-        .new-arrival {
-            font-size: 1rem;
-        }
-    
-        h1 {
-            font-size: 2.5rem;
-        }
-    
-        p {
-            font-size: 1rem;
-        }
-    
-        .buy-now-btn {
-            width: 10rem;
-            height: 3rem;
-        }
-    }
-    
 
+    @media screen and (max-width:1338px) {
+        .new-arrival {
+            margin-right: 10%;
+            padding: 50px;
+            width: 60%;
+            height: 70%;
+        }    
+    }
+    
+    @media screen and (max-width:925px) {
+        .new-arrival {
+            margin-right: 10%;
+            padding: 50px;
+            width: 60%  ;
+            height: 80%;
+
+            h1 {
+                font-size: 10vw;
+            }
+
+        }    
+    }
+    @media screen and (max-width:533px) {
+        .new-arrival {
+            margin-right: 0;
+            padding-left: 20px;
+            width: 100%  ;
+            height: 100%;
+            gap: 30px;
+
+            h1 {
+                font-size: 15vw;
+            }   
+
+            p {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+        }    
+    }
+
+    // END OF NEW ARRIVAL BOX AND BG
 
 }
 
@@ -127,39 +124,16 @@
 
 
 .Showcase {
-    margin-top: 4rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    height: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .card {
-        width: 28rem;
+        width: full;
     }
 }
 
-
-
-.Products {
-    margin-top: 4rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    height: auto;
-
-    .card {
-        width: 28rem;
-        background-color: #F4F5F7;
-    }
-
-    .showmorebtn {
-        margin-top: 2rem;
-        height: 4rem;
-        width: 15rem;
-        background: none;
-        border-color: #B88E2F;
-        color: #B88E2F;
-        font-weight: 500;
-    }
-}
 
 
 .button-container {
@@ -186,26 +160,53 @@
 
 .carousal-container {
     background-color: #FCF8F3;
-    height: 100vh;
+    height: 100%;
     margin-top: 6rem;
+    padding-left: 30px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    span {
+    h2 {
         font-size: 3rem;
         font-weight: bolder;
     }
 
-    h1 {
+    span {
         margin-top: 15px;
         font-size: 40px;
         font-weight: 200;
+        display: block;
     }
 
 
 }
+
+
+@media screen and (max-width: 425px) {
+    .carousal-container {
+    
+        h2 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bolder;
+            margin-bottom: 40px;
+        }
+    
+        span {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 40px;
+            font-weight: 200;
+        }
+    
+    
+    }
+}
+
+
+
 
 .btnfilled {
     margin-top: 15px;
@@ -223,16 +224,16 @@
     }
 }
 
-.tag{
+.tag {
     margin-top: 4rem;
     margin-bottom: 1rem;
     text-align: center;
 
-    h3{
+    h3 {
         font-size: 20px;
     }
 
-    h1{
+    h1 {
         font-size: 34px;
         font-style: italic;
         font-weight: bold;
@@ -241,8 +242,8 @@
 
 
 
-.imageGallery{
-    
+.imageGallery {
+
     height: 100vh;
     background-image: url('../../assets/Img_Gallery.png');
     background-repeat: no-repeat;
@@ -256,104 +257,116 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 * {
-  margin: 10;
+    margin: 10;
 }
 
 .slider-wrapper {
-  width: 100%;
-  max-width: 1536px;
-//   margin-inline: auto;
-  position: relative;
-  height: 400px; /* Adjust this to match the new item height */
-  margin-top: 5rem;
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
+    width: 100%;
+    max-width: 1536px;
+    //   margin-inline: auto;
+    position: relative;
+    height: 400px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
 }
 
+
+
+
+
+
+// START CAROUSAL OF IMAGES IN INSPIRATION
+
+
 @keyframes scrollLeft {
-  to {
-    left: -350px; /* Adjust this to match the new item width */
-  }
+    to {
+        left: -350px;
+    }
 }
 
 @keyframes scrollRight {
-  to {
-    right: -350px; /* Adjust this to match the new item width */
-  }
+    to {
+        right: -350px;
+    }
 }
 
 .item {
-  width: 350px; /* Increase the width */
-  height: 400px; /* Increase the height */
-  background-color: red;
-  border-radius: 6px;
-  position: absolute;
+    width: 350px;
+    height: 400px;
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
 }
 
 .left .item {
-  left: max(calc(350px * 8), 100%); /* Adjust this to match the new item width */
-  animation: scrollLeft 10s linear infinite;
+    left: max(calc(350px * 8), 100%);
+    animation: scrollLeft 10s linear infinite;
 }
 
 .right .item {
-  right: max(calc(350px * 8), 100%); /* Adjust this to match the new item width */
-  animation: scrollRight 10s linear infinite;
+    right: max(calc(350px * 8), 100%);
+    animation: scrollRight 10s linear infinite;
 }
 
 .left .item1,
 .right .item1 {
-  animation-delay: calc((-10s / 8) * 7);
-  background-image: url('../../assets/carousal1.png');
+    animation-delay: calc((-10s / 8) * 7);
+    background-image: url('../../assets/carousal1.png');
 }
+
 .left .item2,
 .right .item2 {
-  animation-delay: calc((-10s / 8) * 6);
-  background-image: url('../../assets/carousal2.png');
+    animation-delay: calc((-10s / 8) * 6);
+    background-image: url('../../assets/carousal2.png');
 }
+
 .left .item3,
 .right .item3 {
-  animation-delay: calc((-10s / 8) * 5);
-  background-image: url('../../assets/carousal3.png');
+    animation-delay: calc((-10s / 8) * 5);
+    background-image: url('../../assets/carousal3.png');
 }
+
 .left .item4,
 .right .item4 {
-  animation-delay: calc((-10s / 8) * 4);
-  background-image: url('../../assets/Browse_Bedroom.png');
+    animation-delay: calc((-10s / 8) * 4);
+    background-image: url('../../assets/Browse_Bedroom.png');
 }
+
 .left .item5,
 .right .item5 {
-  animation-delay: calc((-10s / 8) * 3);
-  background-image: url('../../assets/Browse_Dining.png');
+    animation-delay: calc((-10s / 8) * 3);
+    background-image: url('../../assets/Browse_Dining.png');
 }
+
 .left .item6,
 .right .item6 {
-  animation-delay: calc((-10s / 8) * 2);
-  background-image: url('../../assets/Browse_Living.png');
+    animation-delay: calc((-10s / 8) * 2);
+    background-image: url('../../assets/Browse_Living.png');
 }
+
 .left .item7,
 .right .item7 {
-  animation-delay: calc((-10s / 8) * 1);
-  background-image: url('../../assets/carousal3.png');
+    animation-delay: calc((-10s / 8) * 1);
+    background-image: url('../../assets/carousal3.png');
 }
+
 .left .item8,
 .right .item8 {
-  animation-delay: calc((-10s / 8) * 0);
-  background-image: url('../../assets/carousal2.png');
+    animation-delay: calc((-10s / 8) * 0);
+    background-image: url('../../assets/carousal2.png');
 }
 
 
-
-
+// END CAROUSAL OF IMAGES IN INSPIRATION
 
 
 
