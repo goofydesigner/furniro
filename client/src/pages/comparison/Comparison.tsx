@@ -15,6 +15,7 @@ export default function Comparison() {
                 <h2>Home {'>'} Comparison</h2>
             </div>
 
+
             <div className='selected-item-comparison'>
 
                 <div className='text-viewMore'>
@@ -32,10 +33,22 @@ export default function Comparison() {
                         <img src={img1} alt="" />
                     </div>
 
-                    <div className='product-details'></div>
+                    <div className="product-details">
+                        <div className="prod_name">
+                            <p>Asgaard Sofa</p>
+                        </div>
+                        <div className="price">
+                            <p>Rs. 250,000.00</p>
+                        </div>
+                        <div className="rating-review">
+                            <p>4.7</p>
+                            <img src="" alt="" />
+                            <div className="vertical"></div>
+                            <span>204 Review</span>
+                        </div>
+                    </div>
 
                 </div>
-
 
                 <div className='item2'>
                     <div className='image'>
@@ -46,8 +59,6 @@ export default function Comparison() {
 
                     </div>
                 </div>
-
-
 
                 <div className='add-product'>
                     <h4>Add A Product</h4>
@@ -69,314 +80,200 @@ export default function Comparison() {
 
             </div>
 
-            <div className='detail-comper'>
-                <Container className="product-comparison">
-                    <Row style={{ marginTop: '6vmax' }}>
-                        <Col>
+            <div className="table-container">
+                <div className="innerBlock1">
+                    <table className='mt-5 General'>
+                        <tr>
+                            <th>General</th>
+                        </tr>
 
-                            <tr>
-                                <h4>General</h4>
-                            </tr>
-                            <tr>
-                                <p>Sales Package</p>
-                            </tr>
-                            <tr>
-                                <p>Model Number</p>
-                            </tr>
-                            <tr>
-                                <p>Secondary Material</p>
-                            </tr>
-                            <tr>
-                                <p>Configuration</p>
-                            </tr>
-                            <tr>
-                                <p>Upholstery Material</p>
-                            </tr>
-                            <tr>
-                                <p>Upholstery Color</p>
-                            </tr>
+                        <tr>
+                            <td>Sales Package</td>
+                            <td>Model Number</td>
+                            <td>Secondary Material</td>
+                            <td>Configuration</td>
+                            <td>Upholstery Material</td>
+                            <td>Upholstery Color</td>
+                        </tr>
+                    </table>
 
-                        </Col>
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
+                    <table className='mt-5 Product'>
+                        <tr>
+                            <th>Product</th>
+                        </tr>
 
-                            <tr>
-                                <p>1 sectional sofa</p>
-                            </tr>
+                        <tr>
+                            <td>Filling Material</td>
+                            <td>Finish Type</td>
+                            <td>Adjustable Headrest</td>
+                            <td>Maximum Load Capacity</td>
+                            <td>Origin of Manufacture</td>
+                        </tr>
+                    </table>
 
-                            <tr>
-                                <p>TFCBLIGRBL6SRHS</p>
-                            </tr>
+                    <table className='mt-5 Dimensions'>
+                        <tr>
+                            <th>Dimensions</th>
+                        </tr>
 
-                            <tr>
-                                <p>Solid Wood</p>
-                            </tr>
+                        <tr>
+                            <td>Width</td>
+                            <td>Height</td>
+                            <td>Depth</td>
+                            <td>Weight</td>
+                            <td>Seat Height</td>
+                            <td>Leg Height</td>
+                        </tr>
+                    </table>
 
-                            <tr>
-                                <p>L-shaped</p>
-                            </tr>
+                    <table className='mt-5 Warranty'>
+                        <tr>
+                            <th>Warranty</th>
+                        </tr>
 
-                            <tr>
-                                <p>Fabric + Cotton</p>
-                            </tr>
-
-                            <tr>
-                                <p>Bright Grey & Lion</p>
-                            </tr>
-
-                        </Col>
-
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
-
-                            <tr>
-                                <p>1 Three Seater, 2 Single Seater</p>
-                            </tr>
-
-                            <tr>
-                                <p>DTUBLIGRBL568</p>
-                            </tr>
-
-                            <tr>
-                                <p>Solid Wood</p>
-                            </tr>
-
-                            <tr>
-                                <p>L-shaped</p>
-                            </tr>
-
-                            <tr>
-                                <p>Fabric + Cotton</p>
-                            </tr>
-
-                            <tr>
-                                <p>Bright Grey & Lion</p>
-                            </tr>
-
-                        </Col>
-
-                        <Col></Col>
-                    </Row>
+                        <tr>
+                            <td>Warranty Summary</td>
+                            <td>Warranty Service Type</td>
+                            <td>Covered in Warranty</td>
+                            <td>Not Covered in Warranty</td>
+                            <td>Domestic Warranty</td>
+                        </tr>
+                    </table>
 
 
-                    <Row>
-                        <Col>
-                            <tr><h4>Product</h4></tr>
-                            <tr>
-                                <p>Filling Material</p>
-                            </tr>
-                            <tr>
-                                <p>Finish Type</p>
-                            </tr>
-                            <tr>
-                                <p>Adjustable Headrest</p>
-                            </tr>
-                            <tr>
-                                <p>Maximum Load Capacity</p>
-                            </tr>
-                            <tr>
-                                <p>Origin of Manufacture</p>
-                            </tr>
-                        </Col>
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
-                            <tr>
-                                <p>Foam</p>
-                            </tr>
-                            <tr>
-                                <p>Bright Grey & Lion</p>
-                            </tr>
-                            <tr>
-                                <p>No</p>
-                            </tr>
-                            <tr>
-                                <p>280 KG</p>
-                            </tr>
-                            <tr>
-                                <p>India</p>
-                            </tr>
-                        </Col>
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
-                            <tr>
-                                <p>Matte</p>
-                            </tr>
-                            <tr>
-                                <p>Bright Grey & Lion</p>
-                            </tr>
-                            <tr>
-                                <p>Yes</p>
-                            </tr>
-                            <tr>
-                                <p>300 KG</p>
-                            </tr>
-                            <tr>
-                                <p>India</p>
-                            </tr>
-                        </Col>
+                </div>
 
-                        <Col></Col>
-                    </Row>
+                <div className="innerBlock2">
+                    <table className='mt-5 General'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>1 sectional sofa</td>
+                            <td>TFCBLIGRBL6SRHS</td>
+                            <td>Solid Wood</td>
+                            <td>L-shaped</td>
+                            <td>Fabric + Cotton</td>
+                            <td>Bright Grey & Lion</td>
+                        </tr>
+                    </table>
 
-                    <Row>
-                        <Col>
-                            <tr><h4>Dimensions</h4></tr>
-                            <tr>
-                                <p>Width</p>
-                            </tr>
-                            <tr>
-                                <p>Height</p>
-                            </tr>
-                            <tr>
-                                <p>Depth</p>
-                            </tr>
-                            <tr>
-                                <p>Weight</p>
-                            </tr>
-                            <tr>
-                                <p>Seat Height</p>
-                            </tr>
-                            <tr>
-                                <p>Leg Height</p>
-                            </tr>
-                        </Col>
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
-                            <tr>
-                                <p>265.32 cm</p>
-                            </tr>
-                            <tr>
-                                <p>76 cm</p>
-                            </tr>
-                            <tr>
-                                <p>167.76 cm</p>
-                            </tr>
-                            <tr>
-                                <p>45 KG</p>
-                            </tr>
-                            <tr>
-                                <p>41.52 cm</p>
-                            </tr>
-                            <tr>
-                                <p>5.46 cm</p>
-                            </tr>
-                        </Col>
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
-                            <tr>
-                                <p>265.32 cm</p>
-                            </tr>
-                            <tr>
-                                <p>76 cm</p>
-                            </tr>
-                            <tr>
-                                <p>167.76 cm</p>
-                            </tr>
-                            <tr>
-                                <p>65 KG</p>
-                            </tr>
-                            <tr>
-                                <p>41.52 cm</p>
-                            </tr>
-                            <tr>
-                                <p>5.46 cm</p>
-                            </tr>
-                        </Col>
+                    <table className='mt-5 Product'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
 
-                        <Col></Col>
-                    </Row>
+                        <tr>
+                            <td>Foam</td>
+                            <td>Bright Grey & Lion</td>
+                            <td>No</td>
+                            <td>280 KG</td>
+                            <td>India</td>
+                        </tr>
+                    </table>
 
+                    <table className='mt-5 Dimensions'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
 
-                    <Row>
-                        <Col>
-                            <tr><h4>Warranty</h4></tr>
-                            <tr>
-                                <p>Warranty Summary</p>
-                            </tr>
-                            <tr>
-                                <p>Warranty Service Type</p>
-                            </tr>
-                            <tr>
-                                <p>Covered in Warranty</p>
-                            </tr>
-                            <tr>
-                                <p>Not Covered in Warranty</p>
-                            </tr>
-                            <tr>
-                                <p>Domestic Warranty</p>
-                            </tr>
-                        </Col>
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
-                            <tr>
-                                <p>1 Year Manufacturing Warranty</p>
-                            </tr>
-                            <tr>
-                                <p>For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</p>
-                            </tr>
-                            <tr>
-                                <p>Warranty Against Manufacturing Defect</p>
-                            </tr>
-                            <tr>
-                                <p>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
-                            </tr>
-                            <tr>
-                                <p>1 Year</p>
-                            </tr>
-                            <tr>
-                                <p>
-                                    <button className="btnfilled">Explore More</button>
-                                </p>
-                            </tr>
-                        </Col>
-                        <Col>
-                            <tr>
-                                <h4><br /></h4>
-                            </tr>
-                            <tr>
-                                <p>1.2 Year Manufacturing Warranty</p>
-                            </tr>
-                            <tr>
-                                <p>For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</p>
-                            </tr>
-                            <tr>
-                                <p>Warranty of the product is limited to manufacturing defects only.</p>
-                            </tr>
-                            <tr>
-                                <p>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
-                            </tr>
-                            <tr>
-                                <p>3 Months</p>
-                            </tr>
-                            <tr>
-                                <p>
-                                    <button className="btnfilled">Explore More</button>
-                                </p>
-                            </tr>
-                        </Col>
+                        <tr>
+                            <td>265.32 cm</td>
+                            <td>76 cm</td>
+                            <td>167.76 cm</td>
+                            <td>45 KG</td>
+                            <td>41.52 cm</td>
+                            <td>5.46 cm</td>
+                        </tr>
+                    </table>
 
-                        <Col></Col>
-                    </Row>
-                </Container>
+                    <table className='mt-5 Warranty'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
+
+                        <tr>
+                            <td>1 Year Manufacturing Warranty</td>
+                            <td>For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</td>
+                            <td>Warranty Against Manufacturing Defect</td>
+                            <td>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</td>
+                            <td>1 Year</td>
+                            <td>
+                                <button className='btn-ATC'>Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div className="innerBlock3">
+                    <table className='mt-5 General'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>1 Three Seater, 2 Single Seater</td>
+                            <td>DTUBLIGRBL568</td>
+                            <td>Solid Wood</td>
+                            <td>L-shaped</td>
+                            <td>Fabric + Cotton</td>
+                            <td>Bright Grey & Lion</td>
+                        </tr>
+                    </table>
+
+                    <table className='mt-5 Product'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
+
+                        <tr>
+                            <td>Matte</td>
+                            <td>Bright Grey & Lion</td>
+                            <td>Yes</td>
+                            <td>300 KG</td>
+                            <td>India</td>
+                        </tr>
+                    </table>
+
+                    <table className='mt-5 Dimensions'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
+
+                        <tr>
+                            <td>265.32 cm</td>
+                            <td>76 cm</td>
+                            <td>167.76 cm</td>
+                            <td>65 KG</td>
+                            <td>41.52 cm</td>
+                            <td>5.46 cm</td>
+                        </tr>
+                    </table>
+
+                    <table className='mt-5 Warranty'>
+                        <tr>
+                            <th>&nbsp;</th>
+                        </tr>
+
+                        <tr>
+                            <td>1.2 Year Manufacturing Warranty</td>
+                            <td>For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</td>
+                            <td>Warranty of the product is limited to manufacturing defects only.</td>
+                            <td>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</td>
+                            <td>3 Months</td>
+                            <td>
+                                <button className='btn-ATC'>Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div className="innerBlock4"></div>
+
             </div>
 
-            <Promise/>
-            
-            <Footer/>
+            <Promise />
+
+            <Footer />
         </div>
     )
 }

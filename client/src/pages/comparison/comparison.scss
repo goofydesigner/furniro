@@ -26,6 +26,7 @@
     }
 
     .selected-item-comparison {
+        margin-top: 18px;
         padding: 1% 3%;
         height: 100%;
         display: flex;
@@ -77,21 +78,10 @@
 
 
             .product-details {
-                .name-pro {
-                    h4 {
-                        font-size: 36px;
-                        background-color: red;
-                    }
-                }
-
-                .prc-pro {
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-
-                .rating-review-prod {
-                    color: #888;
-                    font-size: 14px;
+                .prod_name {
+                    height: 20000px;
+                    width: 2000px;
+                    background-color: red;
                 }
             }
         }
@@ -139,55 +129,151 @@
 
         }
 
-        .add-product{
+        .add-product {
             width: 20%;
             padding-left: 5%;
             padding-top: 5%;
-            h4{
+
+            h4 {
                 font-size: 1.8vmax;
             }
         }
     }
 
-    .detail-comper{
+    .table-container {
+        margin-top: 40px;
+        height: full;
+        width: 100%;
+        border-top: 1px solid #727272;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
 
-        margin: 6vmax;
+        .innerBlock1,
+        .innerBlock2,
+        .innerBlock3 {
+            width: 20%;
+            height: auto;
+            border-right: 1px solid #727272;
 
-        .product-comparison {
+            table {
+                margin: 20px;
 
-            h4 {
-              font-weight: bold;
-              margin-bottom: 20px;
-            }
-          
-            p {
-              margin-bottom: 10px;
-            }
-          
-            b
-            .row {
-              margin-bottom: 40px;
-            }
-                  
-            .col {
-              padding-left: 0px;
-            }
+                tr {
+                    th {
+                        font-size: 28px;
+                    }
+                }
 
-            .btnfilled {
-                margin-top: 15px;
-                height: 4rem;
-                width: 15rem;
-                background: #B88E2F;
-                border: 2px solid #B88E2F;
-                color: white;
-                font-weight: 500;
-                cursor: pointer;
-            
-                &:hover {
-                    background: #fff;
-                    color: #B88E2F;
+                td {
+                    display: flex;
+                    font-size: 20px;
+                    margin-top: 14px;
+
+                    .btn-ATC {
+                        margin-top: 15px;
+                        height: 60px;
+                        width: 200px;
+                        background: #B88E2F;
+                        border: 2px solid #B88E2F;
+                        color: white;
+                        font-size: 18px;
+                        font-weight: 500;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #fff;
+                            color: #B88E2F;
+                        }
+                    }
                 }
             }
-          }
+        }
+
+        .innerBlock4 {
+            width: 20%;
+            height: 200px;
+
+        }
+
     }
+
+    @media screen and (max-width:1491px) {
+        .table-container {
+            justify-content: flex-start;
+            text-align: left;
+
+            .innerBlock1,
+            .innerBlock2,
+            .innerBlock3 {
+
+                table {
+
+                    tr {
+                        th {
+                            font-size: 18px;
+                        }
+                    }
+
+                    td {
+                        
+                        font-size: 16px;
+
+                        .btn-ATC {
+                            font-size: 18px;
+
+                            &:hover {
+                                background: #fff;
+                                color: #B88E2F;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .innerBlock4 {  
+                height: 200px;
+
+            }
+
+        }
+    }
+
+    @media screen and (max-width:1219px) {
+        .table-container {
+            justify-content: flex-start;
+            text-align: left;
+
+            .innerBlock1,
+            .innerBlock2,
+            .innerBlock3 {
+
+                table {
+
+                    td {
+                        
+                        font-size: 10px;
+                        text-wrap: wrap;
+
+                        .btn-ATC {
+                            font-size: 18px;
+
+                            &:hover {
+                                background: #fff;
+                                color: #B88E2F;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .innerBlock4 {  
+                height: 200px;
+
+            }
+
+        }
+    }
+
+    
 }

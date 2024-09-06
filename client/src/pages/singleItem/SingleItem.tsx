@@ -52,29 +52,18 @@ function SingleItem() {
     return (
         <>
 
-    
-
             <div className="singleItem">
 
                 <Navbar />
 
-                <Row className="path-container">
-                    <Col md={3}>
-                        <Row className="path" style={{ marginLeft: '30px', }}>
-                            <Col style={{ fontWeight: 600, color: '#9F9F9F' }}>Shop</Col>
-                            <Col style={{ fontSize: '1.9rem' }}>{'>'}</Col>
-                            <Col style={{ fontWeight: 600, color: '#9F9F9F' }}>Home</Col>
-                            <Col style={{ fontSize: '1.9rem' }}>{'>'}</Col>
-
-                            <Col className="vertical-line">
-                                <img src="" alt="" />
-                            </Col>
-
-                            <Col style={{ fontWeight: 600, color: 'black', whiteSpace: 'nowrap', fontSize: '1.3rem' }}>Asgaard sofa</Col>
-                        </Row>
-                    </Col>
-                </Row>
-
+                <div className="path-container">
+                    <span>Home</span>
+                    <p>{'>'}</p>
+                    <span>Shop</span>
+                    <p>{'>'}</p>
+                    <div className="vertcline"></div>
+                    <p>Asgaard sofa</p>
+                </div>
 
                 <div className="products-item">
                     <Row className="small-imgSet">
@@ -211,12 +200,13 @@ function SingleItem() {
                                         <img src={x} alt="" />
                                     </div>
                                 </div>
+
                             </Row>
+
                         </Col>
 
                     </Row>
                 </div>
-
 
                 <div className="horizontal-line"></div>
 
@@ -323,10 +313,7 @@ function SingleItem() {
 
                 <Footer />
 
-
             </div>
-
-
         </>
     )
 }
