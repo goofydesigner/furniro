@@ -22,6 +22,7 @@ import Cart from './pages/cart/Cart';
 import Comparison from './pages/comparison/Comparison';
 import Checkout from './pages/checkout/Checkout';
 import Contact from './pages/contact/Contact';
+import ProductHover from './components/addToCartHover/ProductHover';
 
 
 const router = createBrowserRouter([
@@ -33,11 +34,13 @@ const router = createBrowserRouter([
       {
         path: '/',
         // element: <Home />,
+        element: <ProductCard />,
         // element: <SingleItem />,
         // element: <ShoppingCart/>,
         // element: <Cart/>,
         // element: <Checkout/>,
-        element: <Comparison/> ,
+        // element: <Comparison/> ,
+        // element: <ProductHover /> ,
         // element: <Contact/>,
 
       },

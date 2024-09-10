@@ -17,10 +17,21 @@ import gridRound from '../../assets/Icons/Grid-round.png'
 import viewList from '../../assets/Icons/View-list.png'
 import Promise from '../../components/our_promise/Promise';
 
+import share from '../../assets/Icons/share.png'
+import compare from '../../assets/Icons/compare.png'
+import like from '../../assets/Icons/like.png'
+import ProductHover from '../../components/addToCartHover/ProductHover';
+import { useState } from 'react';
+
 
 
 
 const Shop = () => {
+
+
+    const [hovered, setHovered] = useState(null);
+
+
     let active = 2;
     let items = [];
     for (let number = 1; number <= 5; number++) {
@@ -30,6 +41,8 @@ const Shop = () => {
             </Pagination.Item>,
         );
     }
+
+
     return (
         <>
             <Navbar />
@@ -41,56 +54,6 @@ const Shop = () => {
                     <h2>Home {'>'} Shop</h2>
                 </div>
             </div>
-
-
-            {/* <div className="filters">
-                <div className="filter-section" style={{ marginLeft: '10rem' }}>
-                    
-
-                    <button className="filter-options-button">
-                        <img src={gridRound} alt="" />
-                    </button>
-
-                    <button className="filter-options-button">
-                        <img src={viewList} alt="" />
-                    </button>
-
-                    <div className="vertical-line" style={{ marginLeft: '1rem' }}>
-                        <img src="" alt="" />
-                    </div>
-
-                    <div className="results-section" style={{ marginLeft: '1rem', fontSize: '1.2rem', fontStyle: 'italic' }}>
-                        <span>Showing 1-16 of 32 results</span>
-                    </div>
-                </div>
-
-
-                <div className="pagination-section" style={{ marginRight: '10rem' }}>
-                    <div className="show-items" style={{ gap: '0.8rem', marginRight: '2rem' }}>
-                        <span style={{ fontSize: '1.2rem', fontWeight: 500 }}>Show</span>
-                        <div className='item-count'>
-                            <span style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
-                                {9}
-                            </span>
-                        </div>
-                    </div>
-                    <span className="sort-by-button" style={{ fontSize: '1.2rem', fontWeight: 500 }}>Sort by</span>
-
-                    <Dropdown style={{ gap: '0.8rem', marginRight: '2rem', }}>
-                        <Dropdown.Toggle id="dropdown-basic" style={{ backgroundColor: '#fff', border: 'none', color: 'black' }}>
-                            Default Option
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Option 1</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another Option</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-
-
-                </div>
-            </div> */}
 
             <div className="filters">
                 <div className="leftDetails">
@@ -147,8 +110,8 @@ const Shop = () => {
 
                         <li>
                             <div className='shortDropdwn'>
-                                <Dropdown style={{ gap: '0.8rem', marginRight: '2rem'}}>
-                                <Dropdown.Toggle id="dropdown-basic">
+                                <Dropdown style={{ gap: '0.8rem', marginRight: '2rem' }}>
+                                    <Dropdown.Toggle id="dropdown-basic">
                                         Default Option
                                     </Dropdown.Toggle>
 
@@ -166,57 +129,88 @@ const Shop = () => {
 
 
 
-
             <div className='Products'>
 
                 <Row className="mx-3 justify-content-center align-items-center">
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product1} />
-                            <Card.Body>
-                                <Card.Title>Syltherine</Card.Title>
-                                <Card.Text>Stylish cafe chair</Card.Text>
-                                <Card.Title>Rp 2.500.000</Card.Title>
-                            </Card.Body>
-                        </Card>
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+
+                        {hovered === 1 && <ProductHover />}
+                        {hovered != 1 &&
+                            <Card className='border-0'>
+
+                                <Card.Img className='card-img' src={product1} />
+                                <Card.Body>
+                                    <Card.Title>Syltherine</Card.Title>
+                                    <Card.Text>Stylish cafe chair</Card.Text>
+                                    <Card.Title>Rp 2.500.000</Card.Title>
+                                </Card.Body>
+                            </Card>
+                        }
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product2} />
-                            <Card.Body>
-                                <Card.Title>Leviosa</Card.Title>
-                                <Card.Text>Stylish cafe chair</Card.Text>
-                                <Card.Title>Rp 2.500.000</Card.Title>
-                            </Card.Body>
-                        </Card>
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+
+                        {hovered === 1 && <ProductHover />}
+                        {hovered != 1 &&
+                            <Card className='border-0'>
+                                <Card.Img className='card-img' src={product2} />
+                                <Card.Body>
+                                    <Card.Title>Leviosa</Card.Title>
+                                    <Card.Text>Stylish cafe chair</Card.Text>
+                                    <Card.Title>Rp 2.500.000</Card.Title>
+                                </Card.Body>
+                            </Card>
+                        }
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product3} />
-                            <Card.Body>
-                                <Card.Title>Lolito</Card.Title>
-                                <Card.Text>Luxury big sofa</Card.Text>
-                                <Card.Title>Rp 7.000.000</Card.Title>
-                            </Card.Body>
-                        </Card>
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+
+                        {hovered === 1 && <ProductHover />}
+                        {hovered != 1 &&
+                            <Card className='border-0'>
+                                <Card.Img className='card-img' src={product3} />
+                                <Card.Body>
+                                    <Card.Title>Lolito</Card.Title>
+                                    <Card.Text>Luxury big sofa</Card.Text>
+                                    <Card.Title>Rp 7.000.000</Card.Title>
+                                </Card.Body>
+                            </Card>
+                        }
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product4} />
-                            <Card.Body>
-                                <Card.Title>Respira</Card.Title>
-                                <Card.Text>Outbar Table and stoll</Card.Text>
-                                <Card.Title>Rp 500.000</Card.Title>
-                            </Card.Body>
-                        </Card>
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+
+                        {hovered === 1 && <ProductHover />}
+                        {hovered != 1 &&
+                            <Card className='border-0'>
+                                <Card.Img className='card-img' src={product4} />
+                                <Card.Body>
+                                    <Card.Title>Respira</Card.Title>
+                                    <Card.Text>Outbar Table and stoll</Card.Text>
+                                    <Card.Title>Rp 500.000</Card.Title>
+                                </Card.Body>
+                            </Card>
+                        }
                     </Col>
                 </Row>
 
                 <Row className="mx-3 justify-content-center align-items-center">
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product5} />
                             <Card.Body>
@@ -227,7 +221,10 @@ const Shop = () => {
                         </Card>
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product6} />
                             <Card.Body>
@@ -238,7 +235,10 @@ const Shop = () => {
                         </Card>
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product1} />
                             <Card.Body>
@@ -249,53 +249,10 @@ const Shop = () => {
                         </Card>
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product2} />
-                            <Card.Body>
-                                <Card.Title>Respira</Card.Title>
-                                <Card.Text>Outbar Table and stoll</Card.Text>
-                                <Card.Title>Rp 500.000</Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-
-                <Row className="mx-3 justify-content-center align-items-center">
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product5} />
-                            <Card.Body>
-                                <Card.Title>Syltherine</Card.Title>
-                                <Card.Text>Stylish cafe chair</Card.Text>
-                                <Card.Title>Rp 2.500.000</Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product6} />
-                            <Card.Body>
-                                <Card.Title>Leviosa</Card.Title>
-                                <Card.Text>Stylish cafe chair</Card.Text>
-                                <Card.Title>Rp 2.500.000</Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col md={3} className="my-3 d-flex justify-content-center">
-                        <Card className='border-0'>
-                            <Card.Img className='card-img' src={product1} />
-                            <Card.Body>
-                                <Card.Title>Lolito</Card.Title>
-                                <Card.Text>Luxury big sofa</Card.Text>
-                                <Card.Title>Rp 7.000.000</Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product2} />
                             <Card.Body>
@@ -308,7 +265,12 @@ const Shop = () => {
                 </Row>
 
                 <Row className="mx-3 justify-content-center align-items-center">
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+
+                            
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product5} />
                             <Card.Body>
@@ -319,7 +281,10 @@ const Shop = () => {
                         </Card>
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product6} />
                             <Card.Body>
@@ -330,7 +295,10 @@ const Shop = () => {
                         </Card>
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product1} />
                             <Card.Body>
@@ -341,7 +309,68 @@ const Shop = () => {
                         </Card>
                     </Col>
 
-                    <Col md={3} className="my-3 d-flex justify-content-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+                        <Card className='border-0'>
+                            <Card.Img className='card-img' src={product2} />
+                            <Card.Body>
+                                <Card.Title>Respira</Card.Title>
+                                <Card.Text>Outbar Table and stoll</Card.Text>
+                                <Card.Title>Rp 500.000</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+
+                <Row className="mx-3 justify-content-center align-items-center">
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+                        <Card className='border-0'>
+                            <Card.Img className='card-img' src={product5} />
+                            <Card.Body>
+                                <Card.Title>Syltherine</Card.Title>
+                                <Card.Text>Stylish cafe chair</Card.Text>
+                                <Card.Title>Rp 2.500.000</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+                        <Card className='border-0'>
+                            <Card.Img className='card-img' src={product6} />
+                            <Card.Body>
+                                <Card.Title>Leviosa</Card.Title>
+                                <Card.Text>Stylish cafe chair</Card.Text>
+                                <Card.Title>Rp 2.500.000</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
+                        <Card className='border-0'>
+                            <Card.Img className='card-img' src={product1} />
+                            <Card.Body>
+                                <Card.Title>Lolito</Card.Title>
+                                <Card.Text>Luxury big sofa</Card.Text>
+                                <Card.Title>Rp 7.000.000</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col md={3} className="my-3 d-flex justify-content-center"
+                        onMouseEnter={() => setHovered(1)}
+                        onMouseLeave={() => setHovered(null)}
+                        style={{ position: "relative" }} >
                         <Card className='border-0'>
                             <Card.Img className='card-img' src={product2} />
                             <Card.Body>

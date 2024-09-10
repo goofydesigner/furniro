@@ -147,6 +147,7 @@ export default function Comparison() {
                     <table className='mt-5 General'>
                         <tr>
                             <th>&nbsp;</th>
+                            
                         </tr>
                         <tr>
                             <td>1 sectional sofa</td>
@@ -267,7 +268,7 @@ export default function Comparison() {
                     </table>
                 </div>
 
-                <div className="innerBlock4"></div>
+                {/* <div className="innerBlock4"></div> */}
 
             </div>
 
