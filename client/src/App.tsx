@@ -24,50 +24,52 @@ import Checkout from './pages/checkout/Checkout';
 import Contact from './pages/contact/Contact';
 import ProductHover from './components/addToCartHover/ProductHover';
 
-
 const router = createBrowserRouter([
-
   {
     path: '/',
     element: <PrivateRoutes />,
     children: [
       {
         path: '/',
-        // element: <Home />,
-        element: <ProductCard />,
-        // element: <SingleItem />,
-        // element: <ShoppingCart/>,
-        // element: <Cart/>,
-        // element: <Checkout/>,
-        // element: <Comparison/> ,
-        // element: <ProductHover /> ,
-        // element: <Contact/>,
-
+        element: <Home />,
+        // element: <ProductCard />,      remove this with page
+        // element: <ProductHover />,     testing
       },
-
       {
-        path: '/test',
-        element: <div>Test</div>,
+        path: '/shop',
+        element: <Shop />,
       },
-
       {
-        path: '/footer',
-        element: <Footer />,
+        path: '/single-product',
+        element: <SingleItem />,
       },
-
       {
-        path: '/card',
-        element: <ProductCard />,
+        path: 'slidebar',
+        element: <ShoppingCart />,
       },
-
+      {
+        path: 'comparison',
+        element: <Comparison />,
+      },
+      {
+        path: 'cart',
+        element: <Cart />,
+      },
+      {
+        path: '/checkout',
+        element: <Checkout />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
+      },
       {
         path: '/blogpost',
         element: <BlogPost />,
       },
-
       {
-        path: '/shop',
-        element: <Shop />,
+        path: '/test',
+        element: <div>Test</div>,
       },
     ],
   },
@@ -81,7 +83,7 @@ const router = createBrowserRouter([
     path: '/signup',
     element: <Signup />,
   },
-  
+
   {
     path: '*',
     element: <div>Page not found</div>,
