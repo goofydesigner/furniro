@@ -23,6 +23,7 @@ import Comparison from './pages/comparison/Comparison';
 import Checkout from './pages/checkout/Checkout';
 import Contact from './pages/contact/Contact';
 import ProductHover from './components/addToCartHover/ProductHover';
+import Blog from './pages/blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -64,8 +65,8 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: '/blogpost',
-        element: <BlogPost />,
+        path: '/blog',
+        element: <Blog />,
       },
       {
         path: '/test',
