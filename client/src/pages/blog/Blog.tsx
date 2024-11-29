@@ -8,6 +8,9 @@ import { Row, Col } from 'react-bootstrap';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
 
+// image impots
+import RecentPostImage from './../../assets/blog-search-recent-post.jpg';
+
 // css imports
 import './blog.scss';
 
@@ -58,6 +61,52 @@ const Blog = () => {
                   <td>6</td>
                 </tr>
               </table>
+              <h4 className="recent-post">Recent Post</h4>
+              <div className="recent-post-child">
+                <img src={RecentPostImage} alt="book and pen" />
+                <div className="recent-post-text">
+                  <div className="recent-post-child-text">
+                    Going all-in with millennial <br /> design
+                  </div>
+                  <div className="recent-post-child-date">03 Aug 2022</div>
+                </div>
+              </div>
+              <div className="recent-post-child">
+                <img src={RecentPostImage} alt="book and pen" />
+                <div className="recent-post-text">
+                  <div className="recent-post-child-text">
+                    Going all-in with millennial <br /> design
+                  </div>
+                  <div className="recent-post-child-date">03 Aug 2022</div>
+                </div>
+              </div>
+              <div className="recent-post-child">
+                <img src={RecentPostImage} alt="book and pen" />
+                <div className="recent-post-text">
+                  <div className="recent-post-child-text">
+                    Going all-in with millennial <br /> design
+                  </div>
+                  <div className="recent-post-child-date">03 Aug 2022</div>
+                </div>
+              </div>
+              <div className="recent-post-child">
+                <img src={RecentPostImage} alt="book and pen" />
+                <div className="recent-post-text">
+                  <div className="recent-post-child-text">
+                    Going all-in with millennial <br /> design
+                  </div>
+                  <div className="recent-post-child-date">03 Aug 2022</div>
+                </div>
+              </div>
+              <div className="recent-post-child">
+                <img src={RecentPostImage} alt="book and pen" />
+                <div className="recent-post-text">
+                  <div className="recent-post-child-text">
+                    Going all-in with millennial <br /> design
+                  </div>
+                  <div className="recent-post-child-date">03 Aug 2022</div>
+                </div>
+              </div>
             </div>
           </Col>
         </Row>
