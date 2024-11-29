@@ -1,0 +1,69 @@
+// pages imports
+import Navbar from '../../components/navbar/navbar';
+import Footer from '../../components/footer/Footer';
+import BlogPost from '../../components/blog_post/BlogPost';
+
+// boostrap imports
+import { Row, Col } from 'react-bootstrap';
+import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
+
+// css imports
+import './blog.scss';
+
+const Blog = () => {
+  return (
+    <div className="blogMain">
+      <Navbar />
+
+      <div className="blog-banner">
+        <h1>Blog</h1>
+        <h2>Home {'>'} Blog</h2>
+      </div>
+
+      <div className="blog-general">
+        <Row>
+          <Col md={8}>
+            <BlogPost />
+            <BlogPost />
+            <BlogPost />
+          </Col>
+
+          <Col md={4} className="second-col">
+            <div className="category-search">
+              <div className="search-box">
+                <input type="text" placeholder="Search..." className="search-input" />
+                <FaSearch className="search-icon" />
+              </div>
+              <h4 className="category-heading">Categories</h4>
+              <table className="category-text">
+                <tr>
+                  <td className="left">Crafts</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td className="left">Design</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td className="left">Homemade</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td className="left">Interior</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td className="left">Wood</td>
+                  <td>6</td>
+                </tr>
+              </table>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;
