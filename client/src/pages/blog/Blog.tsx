@@ -2,6 +2,7 @@
 import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/Footer';
 import BlogPost from '../../components/blog_post/BlogPost';
+import Promise from '../../components/our_promise/Promise';
 
 // boostrap imports
 import { Row, Col } from 'react-bootstrap';
@@ -111,6 +112,109 @@ const Blog = () => {
           </Col>
         </Row>
       </div>
+
+      <div
+        className="pagination"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '1rem',
+          marginTop: '2rem',
+          marginBottom: '4rem',
+        }}
+      >
+        <button
+          className="page-1"
+          style={{
+            backgroundColor: '#F9F1E7',
+            height: '3rem',
+            width: '3rem',
+            border: 'none',
+            borderRadius: '25%',
+          }}
+        >
+          <span
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '4px',
+            }}
+          >
+            {1}
+          </span>
+        </button>
+
+        <button
+          className="page-2"
+          style={{
+            backgroundColor: '#F9F1E7',
+            height: '3rem',
+            width: '3rem',
+            border: 'none',
+            borderRadius: '25%',
+          }}
+        >
+          <span
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '4px',
+            }}
+          >
+            {2}
+          </span>
+        </button>
+
+        <button
+          className="page-3"
+          style={{
+            backgroundColor: '#F9F1E7',
+            height: '3rem',
+            width: '3rem',
+            border: 'none',
+            borderRadius: '25%',
+          }}
+        >
+          <span
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '4px',
+            }}
+          >
+            {3}
+          </span>
+        </button>
+
+        <button
+          className="More"
+          style={{
+            backgroundColor: '#F9F1E7',
+            height: '3rem',
+            width: '3.5rem',
+            border: 'none',
+            borderRadius: '25%',
+          }}
+        >
+          <span
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '4px',
+            }}
+          >
+            {'More'}
+          </span>
+        </button>
+      </div>
+      <Promise />
+
+      <Footer />
     </div>
   );
 };
