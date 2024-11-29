@@ -44,15 +44,15 @@ const router = createBrowserRouter([
         element: <SingleItem />,
       },
       {
-        path: 'slidebar',
+        path: '/slidebar',
         element: <ShoppingCart />,
       },
       {
-        path: 'comparison',
+        path: '/comparison',
         element: <Comparison />,
       },
       {
-        path: 'cart',
+        path: '/cart',
         element: <Cart />,
       },
       {
