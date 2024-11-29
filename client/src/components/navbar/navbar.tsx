@@ -2,6 +2,7 @@ import './navbar.scss';
 import logo from '../../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faShoppingCart, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -26,24 +27,26 @@ function Navbar() {
           <div className="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
-                  Home
-                </a>
+                <Link to="/">
+                  <a className="nav-link" aria-current="page">
+                    Home
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="">
-                  Shop
-                </a>
+                <Link to="/shop">
+                  <a className="nav-link">Shop</a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About
-                </a>
+                <Link to="/contact">
+                  <a className="nav-link">Contact</a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact
-                </a>
+                <Link to="/blogpost">
+                  <a className="nav-link">Blog</a>
+                </Link>
               </li>
             </ul>
             <div className="d-flex gap-4">
