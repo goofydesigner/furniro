@@ -5,6 +5,7 @@ interface IUser extends Document {
     name: string,
     email: string,
     password: string,
+    isAdmin: Boolean,
     createdAt: Date,
     matchPassword: (enteredPassword: string) => Promise<boolean>
 }
@@ -22,6 +23,10 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
     }
 },
     { timestamps: true }
