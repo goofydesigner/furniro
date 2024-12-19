@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken'
 
 const protect = AsyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     let token
+
     if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
         try {
             token = req.headers.authorization.split(" ")[1]
@@ -28,4 +29,15 @@ const protect = AsyncHandler(async (req: Request, res: Response, next: NextFunct
     }
 })
 
-export default protect
+const admin = (req, res, next) => {
+    if(req.user && req.user.isAdmin) {
+        next()
+    } else {
+        res.status(401);
+        throw new Error('Not authorized as admin')
+    }
+}
+
+
+
+export { protect, admin }
