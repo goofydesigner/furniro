@@ -1,38 +1,42 @@
 import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-// auth context imports
-import { useAuth } from '../../utils/AuthContext';
-
+// pages import
 import './signin.scss';
+import { useSigninMutation } from '../../slices/user.api.slice';
+import { setCredentials } from '../../slices/auth.slice';
 
 const Signin = () => {
-  const { user, signInUser } = useAuth();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [error, setError] = useState(null);
   const signinForm = useRef(null);
 
+  const [signin, { isLoading }] = useSigninMutation();
+  const { userInfo } = useSelector((state) => state.auth);
+
   useEffect(() => {
-    if (user) {
+    if (userInfo) {
       navigate('/');
     }
-  }, [user]);
+  }, [userInfo]);
 
   const handleSubmitSignin = async (event) => {
     event.preventDefault();
 
     const email = signinForm.current.email.value;
     const password = signinForm.current.password.value;
-
-    // console.log('email: ', email, '\npassword: ', password);
     const userInfo = { email, password };
 
-    const result = await signInUser(userInfo);
-    if (result.success) {
+    try {
+      const result = await signin(userInfo).unwrap();
+      dispatch(setCredentials(result));
       navigate('/');
-    } else {
-      console.log(result.message);
-      // setError(result.error.message);
+    } catch (err) {
+      // console.log('error message: ', err);
+      setError(err?.data?.message || err?.error);
     }
   };
 
@@ -48,6 +52,7 @@ const Signin = () => {
         <input type="password" name="password" id="password" placeholder="Password" required />
 
         <input type="submit" value="Sign in" />
+        {error ? error : null}
       </form>
     </div>
   );

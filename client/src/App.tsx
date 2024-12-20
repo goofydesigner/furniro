@@ -7,6 +7,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AuthProvider } from './utils/AuthContext';
 import PrivateRoutes from './utils/PrivateRoutes';
 
+// redux toolkit imports
+import store from './store';
+import { Provider } from 'react-redux';
+
 // pages imports
 // import Navbar from './components/navbar/navbar';
 import Signin from './pages/signin/Signin';
@@ -93,9 +97,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <AuthProvider>
+    <Provider store={store}>
       <RouterProvider router={router} />
-    </AuthProvider>
+    </Provider>
   );
 }
 

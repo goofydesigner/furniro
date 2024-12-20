@@ -1,22 +1,27 @@
 import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-// auth context imports
-import { useAuth } from '../../utils/AuthContext';
-
+// pages import
 import './signup.scss';
+import { useSignupMutation } from '../../slices/user.api.slice';
+import { setCredentials } from '../../slices/auth.slice';
 
 function Signup() {
   const navigate = useNavigate();
-  const { user, signUpUser } = useAuth();
+  const dispatch = useDispatch();
+
   const { error, setError } = useState(null);
   const signupForm = useRef(null);
 
+  const [signup, { isLoading }] = useSignupMutation();
+  const { userInfo } = useSelector((state) => state.auth);
+
   useEffect(() => {
-    if (user) {
+    if (userInfo) {
       navigate('/');
     }
-  }, []);
+  }, [userInfo]);
 
   const handleSubmitSignUp = async (event) => {
     event.preventDefault();
@@ -28,10 +33,13 @@ function Signup() {
 
     const userInfo = { name, email, password };
 
-    const result = await signUpUser(userInfo);
-    if (result.success) {
+    try {
+      const result = await signup(userInfo).unwrap();
+      dispatch(setCredentials(result));
       navigate('/');
-    } else {
+    } catch (err) {
+      console.log(err);
+      console.log(result.message);
       setError(result.error.message);
     }
   };
@@ -42,6 +50,7 @@ function Signup() {
 
       <form onSubmit={handleSubmitSignUp} ref={signupForm}>
         <label htmlFor="name">Name: </label>
+        <br />
         <input type="text" name="name" id="name" placeholder="Name" />
 
         <label htmlFor="email">Email id:</label>
