@@ -16,6 +16,7 @@ const signin = AsyncHandler(
 
         if(user && (await user.matchPassword(password))) {
             res.json({
+                message: 'Login Successful',
                 _id: user.id,
                 name: user.name,
                 email: user.email,
@@ -25,6 +26,9 @@ const signin = AsyncHandler(
             })
         } else {
             res.status(401)
+            .json({
+                message: 'Invalid email or password'
+            })
             throw new Error('Invalid email or password')
         }
     }
